@@ -2,20 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  background-color: black;
+  color: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .navbar {
+    @apply flex text-white font-medium text-lg p-2 gap-x-2;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .about {
+    @apply text-black font-semibold text-center mx-auto my-24;
+  }
 }
